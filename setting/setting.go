@@ -49,8 +49,8 @@ type LogConfig struct {
 	MaxBackups int    `mapstructure:"max_backups"`
 }
 
-func Init(filePath string) (err error) {
-	viper.SetConfigFile(filePath)
+func Init() (err error) {
+	viper.SetConfigFile("./conf/config.yaml")
 	err = viper.ReadInConfig() //读取配置信息
 	if err != nil {
 		//读取配置文件失败
