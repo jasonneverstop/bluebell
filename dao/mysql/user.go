@@ -26,7 +26,7 @@ func CheckUserExist(username string) (err error) {
 }
 
 // InsterUser 向数据库中插入一条新的用户记录
-func InsterUser(user *models.User) (err error) {
+func InsertUser(user *models.User) (err error) {
 	// 对密码进行加密
 	user.Password = encryptPassword(user.Password)
 	// 执行SQL语句入库
